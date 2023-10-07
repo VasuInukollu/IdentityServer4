@@ -3,8 +3,6 @@
 
 #pragma warning disable 1591
 
-using System;
-using System.Collections.Generic;
 
 namespace IdentityServer4.EntityFramework.Entities
 {
@@ -12,10 +10,10 @@ namespace IdentityServer4.EntityFramework.Entities
     {
         public int Id { get; set; }
         public bool Enabled { get; set; } = true;
-        public string Name { get; set; }
-        public string DisplayName { get; set; }
-        public string Description { get; set; }
-        public string AllowedAccessTokenSigningAlgorithms { get; set; }
+        public required string Name { get; set; }
+        public string? DisplayName { get; set; }
+        public string? Description { get; set; }
+        public string? AllowedAccessTokenSigningAlgorithms { get; set; }
         public bool ShowInDiscoveryDocument { get; set; } = true;
         public List<ApiResourceSecret> Secrets { get; set; }
         public List<ApiResourceScope> Scopes { get; set; }

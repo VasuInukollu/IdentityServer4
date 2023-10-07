@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace IdentityServer4.EntityFramework.Entities
+﻿namespace IdentityServer4.EntityFramework.Entities
 {
     /// <summary>
     /// Entity for device flow codes
@@ -13,7 +11,7 @@ namespace IdentityServer4.EntityFramework.Entities
         /// <value>
         /// The device code.
         /// </value>
-        public string DeviceCode { get; set; }
+        public required string DeviceCode { get; set; }
 
         /// <summary>
         /// Gets or sets the user code.
@@ -21,7 +19,7 @@ namespace IdentityServer4.EntityFramework.Entities
         /// <value>
         /// The user code.
         /// </value>
-        public string UserCode { get; set; }
+        public required string UserCode { get; set; }
 
         /// <summary>
         /// Gets or sets the subject identifier.
@@ -29,7 +27,7 @@ namespace IdentityServer4.EntityFramework.Entities
         /// <value>
         /// The subject identifier.
         /// </value>
-        public string SubjectId { get; set; }
+        public string? SubjectId { get; set; }
 
         /// <summary>
         /// Gets or sets the session identifier.
@@ -37,7 +35,7 @@ namespace IdentityServer4.EntityFramework.Entities
         /// <value>
         /// The session identifier.
         /// </value>
-        public string SessionId { get; set; }
+        public string? SessionId { get; set; }
 
         /// <summary>
         /// Gets or sets the client identifier.
@@ -45,7 +43,7 @@ namespace IdentityServer4.EntityFramework.Entities
         /// <value>
         /// The client identifier.
         /// </value>
-        public string ClientId { get; set; }
+        public required string ClientId { get; set; }
 
         /// <summary>
         /// Gets the description the user assigned to the device being authorized.
@@ -53,7 +51,7 @@ namespace IdentityServer4.EntityFramework.Entities
         /// <value>
         /// The description.
         /// </value>
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         /// <summary>
         /// Gets or sets the creation time.
@@ -77,6 +75,6 @@ namespace IdentityServer4.EntityFramework.Entities
         /// <value>
         /// The data.
         /// </value>
-        public string Data { get; set; }
+        public required string Data { get; set; }
     }
 }

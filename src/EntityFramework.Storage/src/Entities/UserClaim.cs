@@ -9,6 +9,6 @@ namespace IdentityServer4.EntityFramework.Entities
     public abstract class UserClaim
     {
         public int Id { get; set; }
-        public string Type { get; set; }
+        public required string Type { get; set; }
     }
 }
